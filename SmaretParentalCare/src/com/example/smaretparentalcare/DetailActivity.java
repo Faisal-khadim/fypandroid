@@ -3,6 +3,7 @@ package com.example.smaretparentalcare;
 
 import java.util.ArrayList;
 
+ 
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
@@ -26,6 +27,9 @@ public class DetailActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_detail);
+		
+//		int kidNumber = Integer.parseInt(  getIntent().getStringExtra(getResources().getString(R.string.child_number)).toString());
+
 		
 		final ListView lv = (ListView) findViewById(R.id.lvCustomReports);
 	    

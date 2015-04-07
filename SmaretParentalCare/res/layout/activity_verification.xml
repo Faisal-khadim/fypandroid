@@ -38,6 +38,7 @@
         android:layout_centerHorizontal="true"
         android:textColor="#FFFFFF"
         android:background="@drawable/customview_background"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_marginTop="36dp"
         android:text="@string/verify_text" />
     

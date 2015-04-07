@@ -39,8 +39,11 @@ public class MainActivity extends Activity {
 
 	public void loginFunc(View v)
 	{   
-		Intent i = new Intent(this, AddChild.class);
+		Intent i = new Intent(this, Stats.class);
 		startActivity(i);
+	/*	Intent i = new Intent(this, ChildFirstScreen.class);
+		startActivity(i);*/
+		
 	}
 
 	

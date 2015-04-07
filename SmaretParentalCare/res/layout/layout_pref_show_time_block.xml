@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >  
+     
+              <PreferenceCategory android:title="@string/text_report">
+         <PreferenceScreen
+                 android:key="keyToReportCall"
+                 android:title="@string/text_call"
+                 android:summary="@string/summary_text_report_call" >
+                  
+         </PreferenceScreen>
+
+         <PreferenceScreen
+                 android:key="keyToReportSMS"
+                 android:title="@string/text_sms"
+                 android:summary="@string/summary_text_report_sms" >
+                  <CheckBoxPreference
+                 android:key="next_screen_checkbox_preference"
+                 android:title=" pref"
+                 android:summary=" summary">
+                 </CheckBoxPreference>
+         </PreferenceScreen>
+
+             <PreferenceScreen
+          	     android:key="keyToReportScreen"
+                 android:title="@string/text_screen"
+                 android:summary="@string/summary_text_report_screen" >
+         </PreferenceScreen>
+         
+			 <PreferenceScreen
+                 android:key="keyToReportSMS"
+                 android:title="@string/text_app"
+                 android:summary="@string/summary_text_report_app" >
+         </PreferenceScreen>
+                          
+        
+ </PreferenceCategory>
+    
+    <PreferenceCategory android:title="@string/text_block">
+         <SwitchPreference
+                 android:id="@+id/smsCall"
+                 android:key="keyToBlockCall"
+                 android:title="@string/text_call"
+                 android:summary="@string/summary_text_block_call">
+                 
+                  
+                  
+         </SwitchPreference>
+
+         <SwitchPreference
+             	android:id="@+id/smsBlock"
+                 android:key="keyToBlockSMS"
+                 android:title="@string/text_sms"
+                 android:summary="@string/summary_text_block_sms" >
+         </SwitchPreference>
+
+                  <SwitchPreference
+                 android:key="keyToBlockScreen"
+                 android:title="@string/text_screen"
+                 android:summary="@string/summary_text_block_screen" >
+         </SwitchPreference>
+         
+                           <SwitchPreference
+                 android:key="keyToBlockSMS"
+                 android:title="@string/text_app"
+                 android:summary="@string/summary_text_block_app" >
+         </SwitchPreference>
+                          
+        
+ </PreferenceCategory>
+
+    
+    
+<!--     
+    
+      <PreferenceScreen 
+         android:title="pref_nextdddcreen"
+   android:summary=" pref_nextscreen_summary">         
+         
+        
+        
+      You can place more preferences here that will be shown on the next screen.
+         <CheckBoxPreference
+                 android:key="next_screen_checkbox_preference"
+                 android:title=" pref_title_next_screen_toggle_preference"
+                 android:summary=" pref_summary_next_screen_toggle_preference">
+         </CheckBoxPreference>
+    </PreferenceScreen>
+    
+   
+    <PreferenceCategory android:title=" pref_notification_setting" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_otificationskey"
+            android:title=" pref_notifications" >
+        </CheckBoxPreference>
+
+        
+ </PreferenceCategory>
+    
+     -->
+    
+</PreferenceScreen>

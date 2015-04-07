@@ -16,8 +16,6 @@ public class Verification extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_verification);
 		
-			
-		
 		char []arr=new char[62];
 			for(int i=0;i<62;i++)
 			{
@@ -39,15 +37,9 @@ public class Verification extends Activity {
 		      {
 		    	  pass=pass+  arr[randomno.nextInt(62)];
 		      }
-		      
-			
 		
 	       TextView t= (TextView)findViewById(R.id.genTextView);
-	      
 	      t.setText(pass);
-		
-		
-		
 		
 	}
 
