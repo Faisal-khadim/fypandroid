@@ -8,9 +8,7 @@
                  android:key="keyToReportCall"
                  android:title="@string/text_call"
                  android:summary="@string/summary_text_report_call" >
-               <com.example.smaretparentalcare.TimePreference
-        android:key="timePrefA_Key"
-        android:title="=Strat Time "/>         
+        
         
          </PreferenceScreen>
 
@@ -18,11 +16,6 @@
                  android:key="keyToReportSMS"
                  android:title="@string/text_sms"
                  android:summary="@string/summary_text_report_sms" >
-                  <CheckBoxPreference
-                 android:key="next_screen_checkbox_preference"
-                 android:title=" pref"
-                 android:summary=" summary">
-                 </CheckBoxPreference>
          </PreferenceScreen>
 
              <PreferenceScreen
@@ -32,7 +25,7 @@
          </PreferenceScreen>
          
 			 <PreferenceScreen
-                 android:key="keyToReportSMS"
+                 android:key="keyToReportApp"
                  android:title="@string/text_app"
                  android:summary="@string/summary_text_report_app" >
          </PreferenceScreen>
@@ -65,7 +58,7 @@
          </SwitchPreference>
          
                            <SwitchPreference
-                 android:key="keyToBlockSMS"
+                 android:key="keyToBlockApp"
                  android:title="@string/text_app"
                  android:summary="@string/summary_text_block_app" >
          </SwitchPreference>

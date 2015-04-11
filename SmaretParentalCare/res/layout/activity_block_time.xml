@@ -1,13 +1,13 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    
+    android:layout_height="wrap_content"
     >
 
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:gravity="center"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -16,140 +16,89 @@
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-		android:text="@string/text_strat_time"
         android:layout_centerHorizontal="true"
-        android:textColor="#005826"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-<TimePicker
+        android:text="@string/text_strat_time"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#005826" />
+
+    <TimePicker
         android:id="@+id/timePickerStart"
-        android:layout_width="wrap_content"
-         android:background="@drawable/sh"
-        android:layout_height="wrap_content"
-        android:paddingTop="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
         android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/sh"
+        android:paddingTop="3dp" />
 
     <TextView
         android:id="@+id/textView2"
-        android:paddingTop="3dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView1"
         android:layout_below="@id/timePickerStart"
-        android:textColor="#005826"
-        android:text="@string/text_end_time"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-    
-      <TimePicker
-        android:id="@+id/timePickerEnd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:paddingTop="3dp"
-        
+        android:text="@string/text_end_time"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#005826" />
+
+    <TimePicker
+        android:id="@+id/timePickerEnd"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
         android:layout_alignLeft="@+id/timePickerStart"
         android:layout_below="@+id/textView2"
-        android:background="@drawable/sh" />
+        android:background="@drawable/sh"
+        android:paddingTop="3dp" />
 
-     
-      
- <CheckBox
-android:id="@+id/repeat_onoff"
-android:layout_width="wrap_content"
-android:layout_height="48dip"
-android:layout_gravity="center_vertical|start"
-android:text="alarm_repeat"
-android:textSize="16sp"
+    <com.example.smaretparentalcare.WeekDayLine
+        android:id="@+id/weekDayLine1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timePickerEnd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:gravity="center_horizontal" >
+    </com.example.smaretparentalcare.WeekDayLine>
 
- />
-<LinearLayout
-android:id="@+id/repeat_days"
-android:layout_width="match_parent"
-android:layout_height="48dip"
-android:layout_gravity="top"
-android:orientation="horizontal"
-android:visibility="gone">
-<!-- Day buttons are put here programatically -->
-</LinearLayout>      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <CheckBox
-          android:id="@+id/checkBoxAll"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_centerHorizontal="true"
-          android:layout_below="@+id/timePickerEnd"
-          android:layout_marginTop="71dp"
-          android:text="@string/text_complete_week" />
-   <CheckBox
-          android:id="@+id/checkBox1"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_below="@id/checkBoxAll"
-          android:layout_centerHorizontal="true"
-          android:text="@string/text_monday" />
-    
-      
-      
-      <CheckBox
-          android:id="@+id/checkBox2"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_below="@id/checkBox1"
-          android:layout_centerHorizontal="true"
-          android:text="@string/text_tuesday" />
-    
-      <CheckBox
-          android:id="@+id/checkBox3"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_below="@id/checkBox2"
-          android:layout_centerHorizontal="true"
-          android:text="@string/text_wednesday" />
-    
-       <CheckBox
-          android:id="@+id/checkBox4"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_below="@id/checkBox3"
-          android:layout_centerHorizontal="true"
-          android:text="@string/text_thursday" />
-    
-       <CheckBox
-          android:id="@+id/checkBox5"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_below="@id/checkBox4"
-          android:layout_centerHorizontal="true"
-          android:text="@string/text_friday" />
-       
-    
-          <CheckBox
-          android:id="@+id/checkBox6"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_below="@id/checkBox5"
-          android:layout_centerHorizontal="true"
-          android:text="@string/text_saturday" />
-    
-             <CheckBox
-          android:id="@+id/checkBox7"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_below="@id/checkBox6"
-          android:layout_centerHorizontal="true"
-          android:text="@string/text_sunday" />
-    
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/weekDayLine1"
+        style="?android:attr/buttonBarStyle"
+         >
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_cancel" 
+        style="?android:attr/buttonBarButtonStyle"
+        android:textColor="#ffffff"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:background="@drawable/customview_background"
+        />
+<!--         android:layout_below="@+id/weekDayLine1"
+        android:layout_marginTop="44dp"
+        android:layout_toLeftOf="@+id/textView2" -->
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="@string/text_save" 
+        android:textColor="#ffffff"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        style="?android:attr/buttonBarButtonStyle"
+        android:background="@drawable/customview_background"/>
+<!--         android:layout_alignBaseline="@+id/btnCancel"
+        android:layout_alignBottom="@+id/btnCancel"
+        android:layout_alignRight="@+id/textView2" -->
+    </LinearLayout>
 </RelativeLayout>
 
 </ScrollView>

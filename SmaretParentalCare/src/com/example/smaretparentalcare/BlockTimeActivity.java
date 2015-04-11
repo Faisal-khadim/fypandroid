@@ -1,21 +1,26 @@
 package com.example.smaretparentalcare;
 
 import android.app.Activity;
-import android.content.ClipData.Item;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ToggleButton;
 
 public class BlockTimeActivity extends Activity {
 		
+	
+	
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_block_time);
-	
+		
+		
+		
 	}
 
 	@Override

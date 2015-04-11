@@ -10,6 +10,7 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
+import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.util.Log;
 import android.view.Menu;
@@ -28,9 +29,9 @@ public class SetPrefs extends PreferenceFragment {
 		
 		 
 		
-		SwitchPreference sp=(SwitchPreference)findPreference("keyToBlockCall");
+		SwitchPreference BlockCall=(SwitchPreference)findPreference("keyToBlockCall");
 		
-		sp.setOnPreferenceChangeListener(new OnPreferenceChangeListener(){
+		BlockCall.setOnPreferenceChangeListener(new OnPreferenceChangeListener(){
 
 			@Override
 			public boolean onPreferenceChange(Preference preference,
@@ -50,43 +51,142 @@ public class SetPrefs extends PreferenceFragment {
 			}
 			
 		});
-	
+		
+		SwitchPreference BlockSms=(SwitchPreference)findPreference("keyToBlockSMS");
+		
+		BlockSms.setOnPreferenceChangeListener(new OnPreferenceChangeListener(){
+
+			@Override
+			public boolean onPreferenceChange(Preference preference,
+					Object newValue) {
+				// TODO Auto-generated method stub
+				Boolean b=(Boolean)newValue;
+				if(b==true){
+					Intent i=new Intent(getActivity().getApplicationContext(),BlockTimeActivity.class);
+					startActivity(i);
+
+				}
+				else
+				{
+					
+				}
+		return true;
+			}
+			
+		});
 		
 		
-		//		if(sp.isChecked())
-//		{
-//			
-//		}
-//		if(sp.isEnabled())
-//		{
-//			
-//		}
+		SwitchPreference BlockScreen=(SwitchPreference)findPreference("keyToBlockScreen");
+		
+		BlockScreen.setOnPreferenceChangeListener(new OnPreferenceChangeListener(){
+
+			@Override
+			public boolean onPreferenceChange(Preference preference,
+					Object newValue) {
+				// TODO Auto-generated method stub
+				Boolean b=(Boolean)newValue;
+				if(b==true){
+					Intent i=new Intent(getActivity().getApplicationContext(),BlockTimeActivity.class);
+					startActivity(i);
+
+				}
+				else
+				{
+					
+				}
+		return true;
+			}
+			
+		});
+		
+		SwitchPreference BlockApps=(SwitchPreference)findPreference("keyToBlockApp");
+		
+		BlockApps.setOnPreferenceChangeListener(new OnPreferenceChangeListener(){
+
+			@Override
+			public boolean onPreferenceChange(Preference preference,
+					Object newValue) {
+				// TODO Auto-generated method stub
+				Boolean b=(Boolean)newValue;
+				if(b==true){
+					Intent i=new Intent(getActivity().getApplicationContext(),BlockTimeActivity.class);
+					startActivity(i);
+
+				}
+				else
+				{
+					
+				}
+		return true;
+			}
+			
+		});
+		
+		Preference CallPref=(Preference)findPreference("keyToReportCall");
+		CallPref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+			
+			@Override
+			public boolean onPreferenceClick(Preference preference) {
+				// TODO Auto-generated method stub
+				 Intent i=new Intent(getActivity().getApplicationContext(),CallRecord.class);
+					startActivity(i);
+ 
+				
+				return false;
+			}
+		 	
+		});
 		
 		
-//		sp.setOnPreferenceClickListener(new OnPreferenceClickListener(){
-//
-//			@SuppressLint("ShowToast") @Override
-//			public boolean onPreferenceClick(Preference preference) {
-//				// TODO Auto-generated method stub
-//				Log.d("inside ", "Working");
-//				
-//				
-//				return false;
-//			}
-//			
-//		});
+		Preference SMSPref=(Preference)findPreference("keyToReportSMS");
+		SMSPref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+			
+			@Override
+			public boolean onPreferenceClick(Preference preference) {
+				// TODO Auto-generated method stub
+				 Intent i=new Intent(getActivity().getApplicationContext(),SMSRecord.class);
+					startActivity(i);
+ 
+				return false;
+			}
+		 	
+		});
 		
 		
-		int a=10;
-		if(sp.getSwitchTextOn()!="ON"||a==10)
-		{
-			Toast.makeText(getActivity(),"Aaaaa", Toast.LENGTH_SHORT);	
-		}
-		else 
-		{
-			Toast.makeText(getActivity(),"sdfksd", Toast.LENGTH_SHORT);
-		}
+		Preference ScreenPref=(Preference)findPreference("keyToReportScreen");
+		ScreenPref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+			
+			@Override
+			public boolean onPreferenceClick(Preference preference) {
+				// TODO Auto-generated method stub
+				 Intent i=new Intent(getActivity().getApplicationContext(),ScreenRecord.class);
+					startActivity(i);
+ 
+				return false;
+			}
+		 	
+		});
+ 
+		Preference AppPref=(Preference)findPreference("keyToReportApp");
+		AppPref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+			
+			@Override
+			public boolean onPreferenceClick(Preference preference) {
+				// TODO Auto-generated method stub
+				 Intent i=new Intent(getActivity().getApplicationContext(),AppRecord.class);
+					startActivity(i);
+ 
+				return false;
+			}
+		 	
+		});
+		
 	}
+		
+	 
+		
+		
+
  
 
 	@Override

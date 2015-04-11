@@ -69,36 +69,6 @@
                           
         
  </PreferenceCategory>
-
-    
-    
-<!--     
-    
-      <PreferenceScreen 
-         android:title="pref_nextdddcreen"
-   android:summary=" pref_nextscreen_summary">         
-         
-        
-        
-      You can place more preferences here that will be shown on the next screen.
-         <CheckBoxPreference
-                 android:key="next_screen_checkbox_preference"
-                 android:title=" pref_title_next_screen_toggle_preference"
-                 android:summary=" pref_summary_next_screen_toggle_preference">
-         </CheckBoxPreference>
-    </PreferenceScreen>
-    
-   
-    <PreferenceCategory android:title=" pref_notification_setting" >
-        <CheckBoxPreference
-            android:defaultValue="false"
-            android:key="pref_otificationskey"
-            android:title=" pref_notifications" >
-        </CheckBoxPreference>
-
-        
- </PreferenceCategory>
-    
-     -->
+ 
     
 </PreferenceScreen>

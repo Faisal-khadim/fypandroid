@@ -78,7 +78,7 @@ public class Stats extends Activity {
 		// TODO Auto-generated method stub
 		//super.onListItemClick(l, v, position, id);
 		
-		Log.d("list Cliked", "ho gayaa :P");
+
 	    TextView textView = (TextView) v.findViewById( android.R.id.text1 );
 	    toast( (String) textView.getText() );
 	}
@@ -122,6 +122,11 @@ public class Stats extends Activity {
 	           Intent i=new Intent(context,AddChild.class);
 	           startActivity(i);
 	            return true; 
+	        case R.id.action_msg:
+		           Intent j=new Intent(context,MakeAnnouncement.class);
+		           startActivity(j);
+		            return true; 
+		        
 	        default:
 	            return super.onOptionsItemSelected(item);
 	    }

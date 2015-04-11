@@ -2,6 +2,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.smaretparentalcare.Stats" >
 
+     <item android:id="@+id/action_msg"
+          android:icon="@drawable/msg"
+          android:title="@string/action_msg"
+          android:showAsAction="ifRoom" />
+    
+     
      <item android:id="@+id/action_add"
           android:icon="@drawable/add"
           android:title="@string/action_add"

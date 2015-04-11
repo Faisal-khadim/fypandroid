@@ -13,10 +13,13 @@ public abstract class PContract {
 			public static class SMS_Record implements BaseColumns  {
 				public static final String TABLE_NAME="SMS_Record";
 				public static final String COLUMNS_NAME_CONTACT_NO="Contact_No"; // to whom sms is sent
-				public static final String COLUMNS_NAME_SMS_COUNT="SMS_count";
+				//public static final String COLUMNS_NAME_SMS_COUNT="SMS_count";
+				public static final String COLUMNS_NAME_SMS_Going="SMS_Direction"; //incoming or out going
+				public static final String COLUMNS_NAME_DATE="Date";
+				public static final String COLUMNS_NAME_Id="Id";
 				public static final String COLUMN_NAME_CCONCTACT="CCONTACT"; //as foreign key
 				
-				
+			
 			}
 			public static class Call_Record implements BaseColumns  {
 				public static final String TABLE_NAME="Call_Record";
@@ -24,6 +27,9 @@ public abstract class PContract {
 				public static final String COLUMNS_NAME_DURATION="Duration";
 				public static final String COLUMNS_NAME_STIME="Stime";
 				public static final String COLUMNS_NAME_ETIME="Etime";
+				public static final String COLUMNS_NAME_Call_Going="Call_Direction"; //incoming or out going
+				public static final String COLUMNS_NAME_DATE="Date";
+				public static final String COLUMNS_NAME_Id="Id";
 				public static final String COLUMN_NAME_CCONCTACT="CCONTACT"; //as foreign key
 				
 				
@@ -56,6 +62,7 @@ public abstract class PContract {
 							PContract.tables.Child.COLUMN_NAME_CCONCTACT+ " TEXT PRIMARY KEY UNIQUE ," +
 							PContract.tables.Child.COLUMN_NAME_NAME + TEXT_TYPE +" UNIQUE "+ COMMA_SEP +
 							PContract.tables.Child.COLUMN_NAME_PICPATH+ TEXT_TYPE +
+							
 							" )";
 		}
 		public abstract class Screen_RecordTable{
@@ -70,8 +77,10 @@ public abstract class PContract {
 			public static final String  CREATE_SMS_Record_TABLE  =
 					"CREATE TABLE " + PContract.tables.SMS_Record.TABLE_NAME+ " ( " +
 							PContract.tables.SMS_Record.COLUMNS_NAME_CONTACT_NO+ TEXT_TYPE + COMMA_SEP +
-							PContract.tables.SMS_Record.COLUMNS_NAME_SMS_COUNT+ TEXT_TYPE + COMMA_SEP +
 							PContract.tables.SMS_Record.COLUMN_NAME_CCONCTACT+ " TEXT  ," + 
+							PContract.tables.SMS_Record.COLUMNS_NAME_SMS_Going + "TEXT " +
+							PContract.tables.SMS_Record.COLUMNS_NAME_DATE+"TEXT ," +
+							"PRIMARY KEY("+PContract.tables.SMS_Record.COLUMNS_NAME_CONTACT_NO+ ","+PContract.tables.SMS_Record.COLUMNS_NAME_DATE+")" + 
 							" )";
 		}
 		public abstract class Call_RecordTable{
@@ -79,7 +88,6 @@ public abstract class PContract {
 					"CREATE TABLE " + PContract.tables.Call_Record.TABLE_NAME + " ( " +
 							PContract.tables.Call_Record.COLUMNS_NAME_CONTACT_NO+ INT_TYPE+ " PRIMARY KEY," +
 							PContract.tables.Call_Record.COLUMNS_NAME_DURATION+ TEXT_TYPE + COMMA_SEP +
-							PContract.tables.Call_Record.COLUMNS_NAME_ETIME+ TEXT_TYPE + COMMA_SEP +
 							PContract.tables.Call_Record.COLUMNS_NAME_STIME+ TEXT_TYPE + COMMA_SEP +
 							PContract.tables.Call_Record.COLUMN_NAME_CCONCTACT+ " TEXT  ," +
 							" )";
@@ -91,8 +99,7 @@ public abstract class PContract {
 							PContract.tables.APPs.COLUMNS_NAME_DATE+ TEXT_TYPE + COMMA_SEP +
 							PContract.tables.APPs.COLUMNS_NAME_DURATION+ TEXT_TYPE + COMMA_SEP +
 							PContract.tables.APPs.COLUMN_NAME_CCONCTACT+ " TEXT ," +
-							"PRIMARY KEY(PContract.tables.APPs.COLUMNS_NAME_APP,PContract.tables.APPs.COLUMNS_NAME_DATE)"+
-							
+							"PRIMARY KEY(" +PContract.tables.APPs.COLUMNS_NAME_APP + "," + PContract.tables.APPs.COLUMNS_NAME_DATE +")"+
 							" )";
 		}
 	}

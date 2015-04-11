@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    
+   >
+       <ToggleButton
+        android:id="@+id/T_mon"
+        android:layout_width="53dp"
+        android:layout_height="40dp"
+        android:textOn="Mon"
+        android:textOff="Mon"
+ 		android:layout_marginRight="-4.5dp"
+        android:layout_marginLeft="-5dp"
+ 
+        />
+
+    <ToggleButton
+        android:id="@+id/T_tue"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:textOn="Tue"
+        android:textOff="Tue"
+        android:layout_marginRight="-4.5dp"
+        android:layout_marginLeft="-5dp"
+ 
+        />
+
+    <ToggleButton
+        android:id="@+id/T_wed"
+        android:layout_width="53dp"
+        android:layout_height="40dp"
+        android:textOn="Wed"
+        android:textOff="Wed"
+        android:layout_marginRight="-4.5dp"
+        android:layout_marginLeft="-5dp"
+  
+        />
+
+    <ToggleButton
+        android:id="@+id/T_thu"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:textOn="Thu"
+        android:textOff="Thu"
+        android:layout_marginRight="-4.5dp"
+        android:layout_marginLeft="-5dp"
+ 
+         />
+
+    <ToggleButton
+        android:id="@+id/T_fri"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:textOn="Fri"
+        android:textOff="Fri"
+        android:layout_marginRight="-4.5dp"
+        android:layout_marginLeft="-5dp"
+        />
+
+    <ToggleButton
+        android:id="@+id/T_sat"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:textOn="Sat"
+        android:textOff="Sat"
+        android:layout_marginRight="-4.5dp"
+        android:layout_marginLeft="-5dp"
+        />
+
+    <ToggleButton
+        android:id="@+id/T_sun"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:textOn="Sun"
+        android:textOff="Sun"
+        android:layout_marginRight="-4.5dp"
+        android:layout_marginLeft="-5dp"
+        />
+
+</merge>

@@ -73,20 +73,38 @@
             android:label="@string/title_activity_show_prefs" >
         </activity>
         <activity
-            android:name="com.example.smaretparentalcare.BlockTimeActivity"
+            android:name=".BlockTimeActivity"
             android:label="@string/title_activity_block_time" >
         </activity>
-          <activity
-            android:name="com.example.smaretparentalcare.ShowPrefsTimeBlockActivity"
+        <activity
+            android:name=".ShowPrefsTimeBlockActivity"
             android:label="title_activity_show_prefs" >
         </activity>
-        
- 	 
-        
         <activity
             android:name=".SecondMainActivity"
             android:label="@string/title_activity_second_main" >
         </activity>
-          </application>
+        <activity
+            android:name=".CallRecord"
+            android:label="@string/title_activity_call_record" >
+        </activity>
+        <activity
+            android:name=".SMSRecord"
+            android:label="@string/title_activity_sms_record" >
+        </activity>
+     <activity
+            android:name=".ScreenRecord"
+            android:label="@string/title_activity_screen_record" >
+        </activity>
+     <activity
+            android:name=".AppRecord"
+            android:label="@string/title_activity_app_record" >
+        </activity>
+            
+        <activity
+            android:name=".MakeAnnouncement"
+            android:label="@string/title_activity_make_annoouncement" >
+        </activity>
+    </application>
 
 </manifest>
